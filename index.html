@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Máquina</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>MÁQUINA</h1>
+        <h2>CONTROLE DA MÁQUINA</h2>
+    </header>
+
+    <main>
+
+        <!-- STATUS DA CONEXÃO -->
+        <section class="status">
+            <p>Conexão:</p>
+            <span id="statusConexao">Verificando conexão...</span>
+        </section>
+
+        <!-- CONTROLES DOS MOTORES -->
+        <section class="painel">
+
+            <h3>CONTROLE DOS MOTORES</h3>
+
+            <!-- MOTOR DIREITO -->
+            <div class="grupo-motor">
+                <h4>Motor Direito</h4>
+
+                <button type="button"
+                    onclick="enviarComando('/motorDireitaMenos')">
+                    Diminuir
+                </button>
+
+                <button type="button"
+                    onclick="enviarComando('/motorDireitaMais')">
+                    Aumentar
+                </button>
+            </div>
+
+            <!-- MOTOR ESQUERDO -->
+            <div class="grupo-motor">
+                <h4>Motor Esquerdo</h4>
+
+                <button type="button"
+                    onclick="enviarComando('/motorEsquerdaMenos')">
+                    Diminuir
+                </button>
+
+                <button type="button"
+                    onclick="enviarComando('/motorEsquerdaMais')">
+                    Aumentar
+                </button>
+            </div>
+
+            <!-- MOTOR DA BASE -->
+            <div class="grupo-motor">
+                <h4>Motor da Base</h4>
+
+                <button type="button"
+                    onclick="enviarComando('/motorBaseMenos')">
+                    Diminuir
+                </button>
+
+                <button type="button"
+                    onclick="enviarComando('/motorBaseMais')">
+                    Aumentar
+                </button>
+            </div>
+
+            <!-- MOTOR DA GARRA -->
+            <div class="grupo-motor">
+                <h4>Motor da Garra</h4>
+
+                <button type="button"
+                    onclick="enviarComando('/motorGarraMenos')">
+                    Fechar
+                </button>
+
+                <button type="button"
+                    onclick="enviarComando('/motorGarraMais')">
+                    Abrir
+                </button>
+            </div>
+
+        </section>
+
+        <!-- MENSAGENS DO SISTEMA -->
+        <section class="mensagens">
+            <h3>STATUS DO SISTEMA</h3>
+
+            <p id="mensagem">
+                Aguardando comando...
+            </p>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
